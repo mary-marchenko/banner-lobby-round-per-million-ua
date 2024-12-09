@@ -1,0 +1,128 @@
+$blue: #000055
+$black: #191A23
+$green: #05C48A
+$green-hover: #09B47F
+$white: #FFFFFF
+
+$font-suisse-semb: SuisseIntl-SemiBold, sans-serif //600 //
+
+body.dark
+  background: $black
+  .bannerLobby
+    &__link
+      color: $black
+
+
+//.bannerLobby
+//  &__link
+//    &.noios-padding
+//      padding-top: 27px
+//      @media screen and (max-width: 1500px)
+//        padding-top: 21px
+//      @media screen and (max-width: 650px)
+//        padding-top: 15px
+//      @media screen and (max-width: 600px)
+//        padding-top: 22px
+//  &__right
+//    &-top.noios-padding,
+//    &-bottom.noios-padding
+//      padding-top: 12px
+//      @media screen and (max-width: 650px)
+//        padding-top: 12px
+//      @media screen and (max-width: 600px)
+//        padding-top: 7px
+//  &__left
+//    &-top
+//      &.noios-padding
+//        padding-top: 12px
+//        @media screen and (max-width: 600px)
+//          padding-top: 7px
+//    &-bottom
+//      padding-top: 7px
+
+body
+  -webkit-tap-highlight-color: rgba(0,0,0,0)
+  overscroll-behavior: none
+  background: $blue
+  img,
+  picture
+    max-width: 100%
+    height: auto
+.bannerLobby
+  margin: 0 auto
+  width: 1313px
+  position: relative
+  min-height: 501px
+  max-height: 501px
+  display: flex
+  overflow: hidden
+  justify-content: center
+  background: url("../img/bg-desc.jpg") no-repeat 0 0/cover
+  @media screen and (max-width: 1100px)
+    background: url("../img/bg-tab.jpg") no-repeat 0 100%/cover
+  &__left
+    position: absolute
+    left: 0
+    top: 0
+    width: 174px
+    height: auto
+    &::after
+      content: ""
+      position: absolute
+      left: 0
+      bottom: 0
+      background: url("../img/smoke-left.png") no-repeat 0 0/cover
+      width: 286px
+      height: 263px
+      opacity: 0.65
+  &__right
+    position: absolute
+    right: 0
+    top: 0
+    width: 186px
+    height: auto
+    &::after
+      content: ""
+      position: absolute
+      left: 0
+      bottom: 0
+      background: url("../img/smoke-right.png") no-repeat 0 0/cover
+      width: 322px
+      height: 136px
+      opacity: 0.37
+  &__center
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: center
+    margin: 0 auto
+  &__box
+    width: 839px
+    margin-bottom: 10px
+  &__link
+    width: 276px
+    height: 60px
+    min-height: 60px
+    border-radius: 4px
+    background: $green
+    display: flex
+    justify-content: center
+    align-items: center
+    color: $blue
+    text-transform: uppercase
+    letter-spacing: 1.6px
+    font-size: 20px
+    font-family: $font-suisse-semb
+    margin-bottom: 25px
+    &:hover
+      background: $green-hover
+  &__info
+    line-height: 14px
+    font-size: 10px
+    letter-spacing: 0.55px
+    color: $white
+    width: 83%
+    opacity: 0.8
+    z-index: 1
+    padding-bottom: 20px
+    font-family: $font-suisse-semb
